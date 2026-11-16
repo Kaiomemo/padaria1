@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: 36 32% 96%;
+  --surface: 36 28% 92%;
+  --card: 38 45% 99%;
+  --ink: 12 20% 11%;
+  --muted: 16 12% 36%;
+  --hairline: 34 20% 85%;
+
+  /* Identidade obrigatória: Vermelho Pepperoni (#E31837) e Dourado Trigo (#E8B84A) */
+  --primary: 351 81% 49%;
+  --primary-hover: 351 83% 41%;
+  --primary-tint: 351 75% 95%;
+  --on-primary: 0 0% 100%;
+
+  --secondary: 42 77% 60%;
+  --secondary-soft: 42 72% 92%;
+  --on-secondary: 12 22% 11%;
+}
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Open Sans", system-ui, -apple-system, sans-serif;
+
+  --color-canvas: hsl(var(--canvas));
+  --color-surface: hsl(var(--surface));
+  --color-card: hsl(var(--card));
+  --color-ink: hsl(var(--ink));
+  --color-muted: hsl(var(--muted));
+  --color-hairline: hsl(var(--hairline));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-hover: hsl(var(--primary-hover));
+  --color-primary-tint: hsl(var(--primary-tint));
+  --color-on-primary: hsl(var(--on-primary));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-soft: hsl(var(--secondary-soft));
+  --color-on-secondary: hsl(var(--on-secondary));
+}
+
+@layer base {
+  html {
+    background-color: hsl(var(--canvas));
+    color: hsl(var(--ink));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: hsl(var(--canvas));
+    color: hsl(var(--ink));
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: hsl(var(--secondary) / 0.4);
+    color: hsl(var(--ink));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

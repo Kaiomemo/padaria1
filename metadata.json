@@ -1,0 +1,6 @@
+{
+  "name": "Grande Família Alimentos",
+  "description": "Padaria artesanal em Nova Hartz - RS. Pães quentes, bolos caseiros, cucas, doces e salgados feitos todos os dias. Peça pelo WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
